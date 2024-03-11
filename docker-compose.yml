@@ -6,7 +6,7 @@ networks:
     external: true
 
 services:
-  caddy:
+  nginx:
     container_name: 'site-appa8'
     build: .
     pull_policy: build
