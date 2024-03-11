@@ -11,7 +11,8 @@ services:
     build: .
     pull_policy: build
     restart: unless-stopped
-
+    ports:
+      - "8880:80"
     labels:
       - traefik.enable=true
       # Router configuration

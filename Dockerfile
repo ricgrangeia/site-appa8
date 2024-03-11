@@ -1,3 +1,3 @@
-FROM caddy
+FROM nginx:mainline-alpine-perl
 
-COPY ./src /srv
+COPY ./src /usr/share/nginx/html
