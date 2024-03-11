@@ -15,12 +15,12 @@ services:
       - traefik.enable=true
       # Router configuration
       ## Rule based on the Host of the request
-      - traefik.http.routers.folhetos_route.rule=Host(`appa8.com`) || Host(`www.appa8.com`)
+      - traefik.http.routers.site-appa8.rule=Host(`appa8.com`) || Host(`www.appa8.com`)
       # Service configuration
       ## 80 is the port that the whoami container is listening to
-      - traefik.http.services.folhetos_route.loadbalancer.server.port=80
-      - traefik.http.routers.folhetos_route.tls=true
-      - traefik.http.routers.folhetos_route.tls.certresolver=leresolver
+      - traefik.http.services.site-appa8.loadbalancer.server.port=80
+      - traefik.http.routers.site-appa8.tls=true
+      - traefik.http.routers.site-appa8.tls.certresolver=leresolver
 
     networks:
       - proxy
