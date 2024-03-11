@@ -20,7 +20,7 @@ services:
       ## 80 is the port that the whoami container is listening to
       - traefik.http.services.site-appa8.loadbalancer.server.port=80
       - traefik.http.routers.site-appa8.tls=true
-      - traefik.http.routers.site-appa8.tls.certresolver=leresolver
+      - traefik.http.routers.site-appa8.tls.certresolver=letsencrypt
 
     networks:
       - proxy
